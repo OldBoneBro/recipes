@@ -13,7 +13,7 @@ type Query {
 }
 
 type Recipe {
-  "some comment'
+  "some comment 123'
   id: ID!
   "The name of the recipe"
   name: String
