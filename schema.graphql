@@ -13,6 +13,7 @@ type Query {
 }
 
 type Recipe {
+  "some comment 123"
   id: ID!
   "The name of the recipe"
   name: String
@@ -32,6 +33,12 @@ type Recipe {
   ingredients: [Ingredient]
   "A list of recipes that is related to this particular one, for discoverability"
   relatedRecipes: [Recipe]
+  "List of cookware used in the recipe"
+  cookware: [Cookware]
+}
+
+type Cookware @key(fields: "name", resolvable: false) {
+  name: String!
 }
 
 type Ingredient {
